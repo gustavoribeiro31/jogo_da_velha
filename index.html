@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha Neon</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <div id="player-setup" class="setup-container">
+        <h1>Jogo da Velha</h1>
+        <div class="input-group">
+            <label for="player1">Nome do Jogador 1 (X):</label>
+            <input type="text" id="player1" placeholder="Digite seu nome..." value="Jogador 1">
+        </div>
+        <div class="input-group">
+            <label for="player2">Nome do Jogador 2 (O):</label>
+            <input type="text" id="player2" placeholder="Digite seu nome..." value="Jogador 2">
+        </div>
+        <button id="start-game-button">Começar a Jogar</button>
+    </div>
+
+    <div id="game-container" class="hidden">
+        <div class="scoreboard">
+            <span><span id="player1-name">Jogador 1</span> (X): <span id="score-x">0</span></span>
+            <span><span id="player2-name">Jogador 2</span> (O): <span id="score-o">0</span></span>
+        </div>
+
+        <div class="game-options">
+            <button id="vs-player">2 Jogadores</button>
+            <button id="vs-computer">Contra Máquina</button>
+        </div>
+
+        <div id="game-board" class="board">
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+        </div>
+
+        <div class="status-container">
+    <p id="status-message">Escolha um modo de jogo para começar!</p>
+    <button id="restart-button">Reiniciar Jogo</button>
+    <button id="reset-score-button">Zerar Placar</button>
+    <button id="home-button" class="hidden">Voltar ao Início</button>
+</div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <audio id="win-sound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_2b4a3a6839.mp3" preload="auto"></audio>
+    
+</body>
+</html>
